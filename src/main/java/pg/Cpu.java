@@ -10,6 +10,7 @@ public class Cpu {
   private int ip = 0;
   private int sp = 0;
   private boolean flag = false;
+  private boolean isrunning = true;
   
   public void decSp() {
     if (sp == 0) sp = 64;
@@ -64,6 +65,14 @@ public class Cpu {
 
   public void setFlag(boolean flag) {
     this.flag = flag;
+    }
+  
+  public boolean isRunning() {
+    return isrunning;
+    }
+
+  public void setRunning(boolean isrunning) {
+    this.isrunning = isrunning;
     }
   
   public void print(PrintStream out) {
